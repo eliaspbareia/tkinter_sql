@@ -1,0 +1,21 @@
+http://pythonclub.com.br/guia-rapido-comandos-sqlite3.html
+$sqlite> .table
+member frequencia
+
+$sqlite> .schema Member
+CREATE TABLE member(
+memberid integer primary key,
+membername string not null,
+memberphone integer not null);
+
+
+$sqlite> .exit
+
+inserirdados.sql
+ INSERT INTO clientes VALUES(NULL, 'Carlos', '99999999999', 'carlos@email.com', '118888-8888', 'SP');
+
+$sqlite3 macom.db < inserirdados.sql
+
+$sqlite> SELECT * FROM member
+
+$sqlite> .header on #nome das colunas

@@ -1,0 +1,18 @@
+{% extends 'baseA4.html' %}
+{% block title%}Relatório{% endblock %}
+{% block content %}
+
+{% for person in persons %}
+{# http://zetcode.com/python/jinja/ #}
+    <b>Cadastro número:</b> {{ person.cadastro }} </br>
+    <b>Nome:</b> {{ person.nome }} </br>
+    <b>Frequências no período correspondente a: </b>{{ person.dtaInicial }} - {{ person.dtaFinal }}
+    <hr>
+    Reuniões no período: {{ person.total }} </br>
+    Total de Presença(s): {{ person.presenca }}</br>
+    Total de Falta(s:     {{ person.falta    }}</br>
+    Total de Justificativas: {{ person.justificativa    }}
+
+{%- endfor %}
+{% endblock %}
+

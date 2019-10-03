@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+
+    <!-- Normalize or reset CSS with your favorite library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <!-- Load paper.css for happy printing -->
+	<link rel="stylesheet" href="paper_my.css">
+    <!-- Set page size here: A5, A4 or A3 -->
+
+    <style>
+
+        @page { size: A4 }
+        img {  width: 5.5; height:5.8 }
+
+    </style>
+
+</head>
+
+<body class="A4">
+<section class="sheet padding-10mm">
+  <div class="header" align="center">
+     <img src="data:image/png;base64,{{ img_string }}">
+    <h3>Loja Maçônica Força e Virtude nº 27</h3>
+      <h4>Relatório de Frequências</h4>
+	<hr>
+  </div>
+  <div>
+
+    {% block content%}
+    {% endblock %}
+
+  </div>
+</section>
+</body>
